@@ -1,0 +1,58 @@
+.index{
+    font-family: 'PT Serif', serif;
+    .main-index{
+        .presentacion{
+            padding: 2rem 0px;
+            .presentacion-contenido{
+                border: 1px solid black;
+                border-radius: 5px;
+                .presentacion-text{
+                    padding-top: 10%;
+                    .bienvenida{
+                        padding-bottom: 2rem;
+                        border-bottom: 1px solid grey;
+                        .bienvenida_title{
+                            font-size: 30px;
+                        }
+                        .bienvenida_texto{
+                            font-size: 15px;
+                        }
+                    }
+                    .logearse{
+                        padding-top: 3rem;
+                        .logearse_title{
+                            font-size: 25px;
+                        }
+                        .logearse_texto{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .formulario-seccion{
+            .formulario_title-position{
+                .formulario_title{
+                    font-size: 40px;
+                    border-bottom: 2px solid black;
+                }
+            }
+            .card-position{
+                .card{
+                    margin-top: 3rem;
+                    width: 75%;
+                    .card-img-overlay{
+                        .card-title{
+                            margin-top: 0.5rem;
+                        }
+                    }
+                }
+            }
+            .formulario{
+                .input-group{
+                    width: 75%;
+                }
+            }
+        }
+    }
+}

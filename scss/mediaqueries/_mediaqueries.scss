@@ -1,0 +1,106 @@
+@media only screen and (max-width: 600px) {
+    // Index
+    .index{
+        font-family: 'PT Serif', serif;
+        .main-index{
+            .presentacion{
+                padding: 0px;
+                .presentacion-contenido{
+                    border: {
+                        left: 0px;
+                        right: 0px;
+                        bottom: 0px;
+                        radius: 0px;
+                    }
+                    .presentacion-text{
+                        padding-top: 10%;
+                        .bienvenida{
+                            padding-bottom: 1.5rem;
+                            border-bottom: 1px solid grey;
+                            .bienvenida_title{
+                                font-size: 27px;
+                            }
+                            .bienvenida_texto{
+                                font-size: 14px;
+                            }
+                        }
+                        .logearse{
+                            padding: 2rem 0px;
+                            .logearse_title{
+                                font-size: 23px;
+                            }
+                            .logearse_texto{
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            .formulario-seccion{
+                .formulario_title-position{
+                    .formulario_title{
+                        font-size: 30px;
+                    }
+                }
+                .card-position{
+                    .card{
+                        margin-top: 2rem;
+                        width: 100%;
+                        color: white;
+                        .card-img-overlay{
+                            .card-title{
+                                margin-top: 0px;
+                            }
+                        }
+                    }
+                }
+                .formulario{
+                    .input-group{
+                        width: 100%;
+                        .input-group-text, .form-control, .form-select{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // seccion de compra
+    .compra{
+        .main-compra{
+            background-color: gainsboro;
+            .compra{
+                margin: 0px 1rem;
+                padding-top: 1rem;
+                border: 0px;
+                .side_nav{
+                    border-radius: 5px 5px 0px 0px;
+                    border: 1px solid black;
+                    .side_nav-controls{
+                        .control_filtros1{
+                            display: block;
+                            width: 25px;
+                        }
+                        .control_filtros2{
+                            width: 15px;
+                        }
+                    }
+                    .controles{
+                        height: 0;
+                        width: auto;
+                        z-index: 1;
+                        overflow-x: hidden;
+                    }
+                }
+                .slider{
+                    height: 85vh;
+                    border-radius: 0px;
+                    border: {
+                        left: 1px solid black;
+                        right: 1px solid black;
+                    }
+                }
+            }
+        }
+    }
+}

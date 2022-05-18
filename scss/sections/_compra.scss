@@ -1,0 +1,69 @@
+.compra{
+    font-family: 'PT Serif', serif;
+    .main-compra{
+        background-color: gainsboro;
+        .compra{
+            padding-top: 2rem;
+            margin: 0px 8rem;
+            height: auto;
+            .side_nav{
+                background-color: beige;
+                border: {
+                    right: 1px solid black;
+                    top: 1px solid black;
+                    left: 1px solid black;
+                }
+                border-radius: 5px 0px 0px 5px;
+                .side_nav-controls{
+                    .side_nav-title{
+                        font-size: 30px;
+                        margin-top: 5px;
+                    }
+                    .control_filtros1, .control_filtros2{
+                        display: none;
+                    }
+                }
+                .controles{
+                    .remeras, .pantalones, .buzos, .todos{
+                        margin: 10px 0px;
+                        border-radius: 4px;
+                        background-color: bisque;
+                        border: 1px solid silver;
+                        &:hover{
+                            background-color: gainsboro;
+                        }
+                        &:focus{
+                            background-color: gainsboro;
+                        }
+                    }
+                }
+                .carrito{
+                    margin-top: 1rem;
+                    border-top: 1px solid black;
+                    .carrito_title{
+                        margin: 10px 0px;
+                        font-size: 20px;
+                        color: coral;
+                    }
+                    .boton_carrito{
+                        margin-top: 5px;
+                        background-color: black;
+                        border: 1px solid gray;
+                        color: aliceblue;
+                        border-radius: 4px;
+                    }
+                }
+            }
+            .slider{
+                background-color: white;
+                height: 90vh;
+                overflow: auto;
+                border: {
+                    top: 1px solid black;
+                    right: 1px solid black;
+                }
+                border-radius: 0px 5px 5px 0px;
+            }
+        }
+    }
+}
