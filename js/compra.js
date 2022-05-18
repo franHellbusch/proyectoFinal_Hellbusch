@@ -1,3 +1,4 @@
+let usuarioLogeado = JSON.parse(localStorage.getItem("usuarioLogeado"));
 // constructor
 class Producto{
     constructor (imagen, nombre, desc, precio, id){
@@ -256,4 +257,37 @@ function comprarBuzos() {
         sacarTotal();
         badge();
     }
+}
+
+// seccion de usuario
+function logOut() {
+    usuarioLogeado = null
+    dropdownUser()
+}
+
+let dropdownUsuarioClick = document.getElementById("dropdownMenuClickableInside");
+let dropdownUsuario = document.getElementById("dropdownUsuario");
+let dropdownContent = document.createElement("div");
+dropdownContent.className = "dropdown-content";
+
+function dropdownUser() {
+    while (dropdownUsuario.firstChild) {
+        dropdownUsuario.removeChild(dropdownUsuario.firstChild);
+    }
+    if (usuarioLogeado === null) {
+        dropdownContent.innerHTML = `<h2 class="fs-4 fw-bold mt-3">No estas logeado</h2>
+        <p>Para poder realizar compras debes estar logeado</p>
+        <a href="../index.html"><button onclick="logIn()" class="btn btn-primary">Log In</button></a>
+        <a href="../index.html#formularioSeccion"><button class="btn btn-success">Sing In</button></a>`
+        dropdownUsuario.append(dropdownContent);
+    } else {
+        dropdownContent.innerHTML = `<img class="img-dropdown-menu rounded-circle w-25" src="../assets/img/usuario.png" alt="usuario">
+        <h3 class="fs-6 mt-2"><b>Usuario:</b> ${usuarioLogeado.username}</h3>
+        <h3 class="fs-6 mt-2 mb-2"><b>Email:</b> ${usuarioLogeado.email}</h3>
+        <button id="logOut" onclick="logOut()" class="btn btn-secondary">Log Out</button>`
+        dropdownUsuario.append(dropdownContent);
+    }
+}
+dropdownUsuarioClick.onclick = () => {
+    dropdownUser()
 }

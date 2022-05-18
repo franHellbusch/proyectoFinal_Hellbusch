@@ -96,10 +96,11 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  right: -2px;
+  right: -1.1rem;
   background-color: beige;
   overflow-x: hidden;
   padding-top: 4rem;
+  padding-left: 1rem;
   transition: 0.5s;
   border-left: 2px solid grey;
   border-radius: 10px 0px 0px 10px; }
@@ -118,27 +119,36 @@
       color: grey;
       font-size: 55px; }
   .header .navbar .sidenav .carrito_title {
-    margin-left: 2rem;
     font-size: 20px;
     color: coral; }
-  .header .navbar .sidenav .boton_carrito {
+  .header .navbar .sidenav .carrito-controles .boton_carrito {
     display: inline;
     margin-top: 5px;
     background-color: black;
     border: 1px solid gray;
     color: aliceblue;
-    border-radius: 4px;
-    margin-left: 2rem; }
-  .header .navbar .sidenav .total_carrito {
+    border-radius: 4px; }
+  .header .navbar .sidenav .carrito-controles .total_carrito {
     display: inline;
-    right: 1rem;
-    margin-left: 2rem;
     font-size: 18px; }
+  .header .navbar .sidenav .compras-anteriores {
+    margin-top: 20%;
+    border-top: 1px solid black; }
 
-.header .navbar .abrir_carrito .icon_carrito {
+.header .navbar .contenido_navbar .btn-group .icon_usuario {
+  width: 30px;
+  margin-right: 1rem;
+  transition: 0.5s; }
+  .header .navbar .contenido_navbar .btn-group .icon_usuario:hover {
+    width: 35px; }
+
+.header .navbar .contenido_navbar .btn-group .dropdown-menu {
+  width: 200px; }
+
+.header .navbar .contenido_navbar .icon_carrito {
   width: 40px;
   transition: 0.5s; }
-  .header .navbar .abrir_carrito .icon_carrito:hover {
+  .header .navbar .contenido_navbar .icon_carrito:hover {
     width: 50px; }
 
 @media only screen and (max-width: 600px) {

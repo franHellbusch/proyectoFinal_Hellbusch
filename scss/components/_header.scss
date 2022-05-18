@@ -19,10 +19,13 @@
             position: fixed;
             z-index: 1;
             top: 0;
-            right: -2px;
+            right: -1.1rem;
             background-color: beige;
             overflow-x: hidden;
-            padding-top: 4rem;
+            padding: { 
+                top: 4rem;
+                left: 1rem;
+            }
             transition: 0.5s;
             border-left: 2px solid grey;
             border-radius: 10px 0px 0px 10px;
@@ -45,27 +48,42 @@
                 }
             }
             .carrito_title{
-                margin-left: 2rem;
                 font-size: 20px;
                 color: coral;
             }
-            .boton_carrito{
-                display: inline;
-                margin-top: 5px;
-                background-color: black;
-                border: 1px solid gray;
-                color: aliceblue;
-                border-radius: 4px;
-                margin-left: 2rem;
+            .carrito-controles{
+                .boton_carrito{
+                    display: inline;
+                    margin-top: 5px;
+                    background-color: black;
+                    border: 1px solid gray;
+                    color: aliceblue;
+                    border-radius: 4px;
+                }
+                .total_carrito{
+                    display: inline;
+                    font-size: 18px;
+                }
             }
-            .total_carrito{
-                display: inline;
-                right: 1rem;
-                margin-left: 2rem;
-                font-size: 18px;
+            .compras-anteriores{
+                margin-top: 20%;
+                border-top: 1px solid black;
             }
         }
-        .abrir_carrito{
+        .contenido_navbar{
+            .btn-group{
+                .icon_usuario{
+                    width: 30px;
+                    margin-right: 1rem;
+                    transition: 0.5s;
+                    &:hover {
+                        width: 35px;
+                    }
+                }
+                .dropdown-menu{
+                    width: 200px;
+                }
+            }
             .icon_carrito{
                 width: 40px;
                 transition: 0.5s;
