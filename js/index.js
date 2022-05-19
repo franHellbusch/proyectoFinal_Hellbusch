@@ -88,7 +88,7 @@ function login() {
     if (campoUsername == "") {
         alert2("Complete el campo Username", "danger");
         alertPlaceholder2.append(wrapper);
-    } else if (campoUsername.length >= 10) {
+    } else if (campoUsername.length >= 20) {
         alert2("El campo Username no puede ser tan largo, hasta 20 caracteres", "danger");
         alertPlaceholder2.append(wrapper);
     }
@@ -120,4 +120,10 @@ function login() {
 
 botonVerificar.onclick = () => {
     login()
+}
+
+// eliminar local storage
+let eliminarLocalStorage = document.getElementById("eliminarLocalStorage");
+eliminarLocalStorage.onclick = () => {
+    localStorage.clear();
 }
