@@ -11,6 +11,7 @@ function alert2(message, type) {
 }
 
 // seccion de formulario
+sessionStorage.setItem("logeado?", "no")
 class Usuario{
     constructor (nombre, apellido, email, username, filtro){
         this.nombre = nombre
@@ -56,15 +57,12 @@ function validarFormulario() {
     usuarioFiltro = campoFiltro
 
     if (usuarioNombre == "" || usuarioApellido == "" || usuarioEmail == "" || usuarioUsername == "" || usuarioFiltro == ""){
-        alert2("falta completar un campo o alguno es incorrecto", "danger");
-        alertPlaceholder1.append(wrapper);
+        alertaErrorFormulario()
     } else {
-        alert2("se completo correctamente el formulario, ingrese a la tienda con el boton de IR A LA TIENDA", "success");
-        alertPlaceholder1.append(wrapper);
+        alertaFormularioConfirmado()
         usuarioLogeado = new Usuario (usuarioNombre, usuarioApellido, usuarioEmail, usuarioUsername, usuarioFiltro);
         localStorage.setItem("usuarioLogeado", JSON.stringify(usuarioLogeado));
-        confirmarFormulario.innerHTML = "Ir a la tienda";
-        confirmarFormularioLink.setAttribute("href", "pages/compra.html");
+        sessionStorage.setItem("logeado?", "si")
     }
 }
 
@@ -72,8 +70,7 @@ let confirmarFormulario = document.getElementById("confirmarFormulario");
 confirmarFormulario.onclick = () => {
     let usuarioLoging = JSON.parse(localStorage.getItem("usuarioLogeado"));
     if (usuarioLoging !== null) {
-        alert2("Ya tienes una cuenta creada, presione LOG IN", "info");
-        alertPlaceholder1.append(wrapper);
+        alertaCuentaYaCreada();
     } else {
         validarFormulario();
     }
@@ -105,15 +102,13 @@ function login() {
         alertPlaceholder4.append(wrapper);
     } else {
         if (campoUsername == "" || campoEmail == "") {
-            alert2("completa los campos restantes", "danger");
-            alertPlaceholder4.append(wrapper);
+            alertaErrorLogin()
         } else if (usuarioLoging.username !== campoUsername || usuarioLoging.email !== campoEmail) {
             alert2("Uno de los dos campos es incorrecto, o no esta logeado", "info");
             alertPlaceholder4.append(wrapper);
         } else {
-            botonIngresar.setAttribute("href", "pages/compra.html")
-            alert2("Ya puede ingresar", "info");
-            alertPlaceholder4.append(wrapper);
+            sessionStorage.setItem("logeado?", "si")
+            alertaLogeadoCorrectamente();
         }
     }
 }
@@ -126,4 +121,8 @@ botonVerificar.onclick = () => {
 let eliminarLocalStorage = document.getElementById("eliminarLocalStorage");
 eliminarLocalStorage.onclick = () => {
     localStorage.clear();
+}
+
+function consola(){
+    console.log("hola mundo");
 }

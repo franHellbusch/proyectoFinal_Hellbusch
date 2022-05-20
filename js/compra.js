@@ -1,3 +1,4 @@
+let estaLogeado =  sessionStorage.getItem("logeado?")
 let usuarioLogeado = JSON.parse(localStorage.getItem("usuarioLogeado"));
 // constructor
 class Producto{
@@ -261,7 +262,8 @@ function comprarBuzos() {
 
 // seccion de usuario
 function logOut() {
-    usuarioLogeado = null
+    estaLogeado = "no";
+    console.log(estaLogeado)
     dropdownUser()
 }
 
@@ -274,7 +276,7 @@ function dropdownUser() {
     while (dropdownUsuario.firstChild) {
         dropdownUsuario.removeChild(dropdownUsuario.firstChild);
     }
-    if (usuarioLogeado === null) {
+    if (estaLogeado == "no") {
         dropdownContent.innerHTML = `<h2 class="fs-4 fw-bold mt-3">No estas logeado</h2>
         <p>Para poder realizar compras debes estar logeado</p>
         <a href="../index.html"><button onclick="logIn()" class="btn btn-primary">Log In</button></a>
