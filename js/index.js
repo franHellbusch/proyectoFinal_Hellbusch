@@ -69,11 +69,7 @@ function validarFormulario() {
 let confirmarFormulario = document.getElementById("confirmarFormulario");
 confirmarFormulario.onclick = () => {
     let usuarioLoging = JSON.parse(localStorage.getItem("usuarioLogeado"));
-    if (usuarioLoging !== null) {
-        alertaCuentaYaCreada();
-    } else {
-        validarFormulario();
-    }
+    usuarioLoging !== null ? alertaCuentaYaCreada() : validarFormulario();
 }
 
 // seccion de log in
@@ -83,14 +79,16 @@ let botonIngresar = document.getElementById("ingresar");
 function login() {
     let campoUsername = document.getElementById("usernameLogin").value;
     if (campoUsername == "") {
-        alert2("Complete el campo Username", "danger");
-        alertPlaceholder2.append(wrapper);
+        campoUsername = "";
     } else if (campoUsername.length >= 20) {
         alert2("El campo Username no puede ser tan largo, hasta 20 caracteres", "danger");
         alertPlaceholder2.append(wrapper);
+        campoNombre = ""
     }
     let campoEmail = document.getElementById("emailLogin").value;
-    if (campoEmail.includes("@") == false || campoEmail.includes(".") == false) {
+    if (campoEmail == "") {
+        campoEmail = "";
+    } else if (campoEmail.includes("@") == false || campoEmail.includes(".") == false) {
         alert2("email mal ingresado", "danger");
         alertPlaceholder3.append(wrapper);
         campoEmail = "";
@@ -98,8 +96,7 @@ function login() {
 
     let usuarioLoging = JSON.parse(localStorage.getItem("usuarioLogeado"));
     if (usuarioLoging === null) {
-        alert2("No existe este usuario", "info");
-        alertPlaceholder4.append(wrapper);
+        alertaErrorNoUsuarios();
     } else {
         if (campoUsername == "" || campoEmail == "") {
             alertaErrorLogin()

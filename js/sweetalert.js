@@ -45,6 +45,13 @@ function alertaLogeadoCorrectamente() {
 function alertaErrorLogin() {
     Swal.fire({
         icon: 'error',
-        title: 'completa los campos restantes',
+        title: 'completa todos los campos',
+    })
+}
+
+function alertaErrorNoUsuarios() {
+    Swal.fire({
+        icon: 'error',
+        title: 'No hay usuarios creados',
     })
 }
