@@ -31,30 +31,20 @@ let usuarioLogeado = {}
 
 function validarFormulario() {
     let campoNombre = document.getElementById("nombreFormulario").value;
-    if (campoNombre == "" || typeof campoNombre != "string") {
-        campoNombre = "";
-    }
-    usuarioNombre = campoNombre.toUpperCase()
+    (campoNombre == "" || typeof campoNombre != "string") && (campoNombre = "");
+    usuarioNombre = campoNombre.toUpperCase();
     let campoApellido = document.getElementById("apellidoFormulario").value;
-    if (campoApellido == "" || typeof campoApellido != "string") {
-        campoApellido = "";
-    }
-    usuarioApellido = campoApellido.toUpperCase()
+    (campoApellido == "" || typeof campoApellido != "string") && (campoApellido = "");
+    usuarioApellido = campoApellido.toUpperCase();
     let campoEmail = document.getElementById("emailFormulario").value;
-    if (campoEmail.includes("@") == false || campoEmail.includes(".") == false) {
-        campoEmail = "";
-    }
-    usuarioEmail = campoEmail
+    (campoEmail.includes("@") == false || campoEmail.includes(".") == false) && (campoEmail = "");
+    usuarioEmail = campoEmail;
     let campoUsername = document.getElementById("usernameFormulario").value;
-    if (campoUsername == "" || campoUsername.length >= 20) {
-        campoUsername = "";
-    }
+    (campoUsername == "" || campoUsername.length >= 20) && (campoUsername = "");
     usuarioUsername = campoUsername;
     let campoFiltro = document.getElementById("filtroFormulario").value;
-    if (campoFiltro == "Que producto prefieres"){
-        campoFiltro = "";
-    }
-    usuarioFiltro = campoFiltro
+    (campoFiltro == "Que producto prefieres") && (campoEmail = "");
+    usuarioFiltro = campoFiltro;
 
     if (usuarioNombre == "" || usuarioApellido == "" || usuarioEmail == "" || usuarioUsername == "" || usuarioFiltro == ""){
         alertaErrorFormulario()
