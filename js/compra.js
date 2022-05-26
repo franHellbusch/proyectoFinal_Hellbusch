@@ -11,6 +11,12 @@ class Producto{
         this.vendido = false
     }
 }
+
+fetch(`./productos.json`)
+.then( (res) => res.json())
+.then( (data) => {
+    console.log(data)
+});
 // remeras
 let remera1 = new Producto ("remera-mangas-cortas.jpg", "Remera mangas cortas", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", 2500, "remeraCorta");
 let remera2 = new Producto ("remera-mangas-largas.jpg", "Remera mangas largas", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", 1900, "remeraLarga");
