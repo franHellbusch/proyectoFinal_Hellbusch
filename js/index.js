@@ -9,7 +9,6 @@ function alert2(message, type) {
   wrapper = document.createElement('div')
   wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible d-flex align-items-center" role="alert"> <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg> <div>' + message + '</div><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
 }
-
 // seccion de formulario
 sessionStorage.setItem("logeado?", "no")
 class Usuario{

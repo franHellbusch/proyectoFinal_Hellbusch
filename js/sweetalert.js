@@ -55,3 +55,31 @@ function alertaErrorNoUsuarios() {
         title: 'No hay usuarios creados',
     })
 }
+
+function compraRealizada() {
+    Swal.fire({
+        icon: 'success',
+        title: 'Su compra fue realizada con exito',
+    })
+}
+
+function noHayProductos() {
+    Swal.fire({
+        icon: 'error',
+        title: 'No hay productos en su carrito',
+    })
+}
+
+function compraNoRealizada() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Usuario no logeado',
+        text: 'Para realizar compras en la tienda debe estar logeado!',
+        focusCancel: true,
+        confirmButtonText:`Ir a logearse`
+    }).then((result) => {
+        if (result.value) {
+          window.location.href = `../index.html`
+        }
+    })
+}

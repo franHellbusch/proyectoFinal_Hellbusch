@@ -1,4 +1,10 @@
 [
-    {"imagen": "remera-mangas-cortas.jpg", "nombre": "remera1"},
-    {"imagen": "remera-mangas-cortas.jpg", "nombre": "remera2"}
+    {"remeras": {"remera1": {"imagen": "remera-mangas-cortas.jpg", "nombre": "Remera mangas cortas", "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", "precio": 2500, "id": "remeraCorta"},
+    "remera2": {"imagen": "remera-mangas-largas.jpg", "nombre": "Remera mangas largas", "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", "precio": 1900, "id": "remeraLarga"},
+    "remera3": {"imagen": "remera-musculosa.jpg", "nombre": "Remera musculosa", "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", "precio": 2100, "id": "remeraMusculosa"}}},
+    {"pantalones": {"pantalon1": {"imagen": "pantalon-corto.jpg", "nombre": "Pantalon corto", "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", "precio": 2700, "id": "pantalonCorto"},
+    "pantalon2": {"imagen": "pantalon-jean.webp", "nombre": "Pantalon jean", "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", "precio": 3000, "id": "pantalonJean"},
+    "pantalon3": {"imagen": "pantalon-jogging.webp", "nombre": "Pantalon jogging", "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", "precio": 2800, "id": "pantalonJogging"}}},
+    {"buzos": {"buzo1": {"imagen": "buzo-capucha.jpg", "nombre": "Buzo con capucha", "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", "precio": 4000, "id": "buzoCapucha"},
+    "buzo2": {"imagen": "buzo-sin-capucha.png", "nombre": "Buzo sin capucha", "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", "precio": 3500, "id": "buzoSinCapucha"}}}
 ]
